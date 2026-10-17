@@ -1,0 +1,17 @@
+# Dependencias
+node_modules/
+
+# Archivos generados por el navegador/entorno
+*.log
+npm-debug.log*
+
+# Editor
+.vscode/
+
+# Seguridad
+.env
+.env.*
+
+# Copias de seguridad
+*.bak
+*~
