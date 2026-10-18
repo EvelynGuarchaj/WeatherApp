@@ -79,6 +79,11 @@ body {
   text-align: center;
 }
 
+.pantalla[hidden],
+.listaCiudades[hidden] {
+  display: none;
+}
+
 #seccion-principal {
   max-width: 42rem;
   margin: 0 auto;
@@ -162,4 +167,152 @@ body {
 .diaPronostico .maxMin {
   color: var(--colorDetalle);
   font-weight: 600;
+}
+
+/* Pantalla de cargando */
+#seccion-cargando img {
+  width: min(14rem, 55vw);
+  border-radius: 1rem;
+}
+
+#seccion-cargando p {
+  color: var(--colorAcento);
+  font-size: 1.3rem;
+}
+
+.cargaCircular {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4rem solid var(--colorGrisClaro);
+  border-top-color: var(--colorAcento);
+  border-radius: 50%;
+  animation: girar 0.9s linear infinite;
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Pantallas de error */
+.pantallaError img {
+  width: min(14rem, 55vw);
+  border-radius: 1rem;
+}
+
+.pantallaError p {
+  font-size: 1.2rem;
+  max-width: 28rem;
+}
+
+.botonReintentar {
+  padding: 0.7rem 1.6rem;
+  border: none;
+  border-radius: 2rem;
+  background: var(--colorAcento);
+  color: var(--colorFondo);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.botonReintentar:hover {
+  background: var(--colorAcentoClaro);
+  color: var(--colorTexto);
+}
+
+/* Desplegable de ciudades */
+.listaCiudades {
+  position: absolute;
+  top: calc(100% + 0.4rem);
+  right: 0;
+  z-index: 10;
+  width: max(100%, 18rem);
+  max-height: 16rem;
+  overflow-y: auto;
+  background: var(--colorFondo);
+  border: 1px solid var(--colorAcentoClaro);
+  border-radius: 0.6rem;
+  box-shadow: 0 0.4rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.filaCiudad {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.1rem;
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  border: none;
+  border-bottom: 1px solid var(--colorGrisClaro);
+  background: transparent;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.filaCiudad:last-child {
+  border-bottom: none;
+}
+
+.filaCiudad:hover {
+  background: var(--colorGrisClaro);
+}
+
+.filaCiudad .regionCiudad {
+  color: var(--colorDetalle);
+  font-size: 0.85rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .encabezado {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #campoBusqueda {
+    min-width: 12rem;
+  }
+
+  #nombreCiudad {
+    font-size: 1.6rem;
+  }
+
+  .listaCiudades {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .encabezado {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .buscador {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #campoBusqueda {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .detallesActuales {
+    grid-template-columns: 1fr;
+  }
+
+  .detalle:last-child {
+    grid-column: auto;
+  }
+
+  .diaPronostico {
+    min-width: 0;
+    width: 100%;
+  }
 }
