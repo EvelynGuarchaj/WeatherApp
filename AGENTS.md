@@ -1,9 +1,9 @@
 # AGENTS.md
 
 ## Qué es este repo
-- Asignatura "Progra Web": app de clima con HTML, CSS y JavaScript puros.
+- App de clima con HTML, CSS y JavaScript puros.
   Sin framework, sin bundler, sin npm, sin build, sin tests, sin lint.
-- `README.md` es la especificación del profesor (en español). Es la fuente
+- `README.md` es la especificación del dueño del proyecto (en español). Es la fuente
   de verdad de requisitos: si este archivo y el README difieren, vale el README.
 - Estado actual: solo existen requisitos y `assets/`. El código está por crear.
 
@@ -37,4 +37,8 @@
  <!-- agregado a mano -->
 ## Como se levanta 
 - Se levanta con Live Server de VS Code 
+
+## API que consume
+- Geocoding de Open-Meteo: convierte el nombre de la ciudad en coordenadas.
+- Forecast de Open-Meteo: devuelve clima actual y pronóstico a partir de coordenadas.
 
