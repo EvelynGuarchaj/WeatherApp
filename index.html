@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <header class="encabezado">
+    <h1 class="tituloApp">Weather App</h1>
+    <div class="buscador">
+      <input type="text" id="campoBusqueda" placeholder="Buscar ciudad..." autocomplete="off">
+      <button type="button" id="botonBuscar">Buscar</button>
+      <div id="listaCiudades" class="listaCiudades" hidden></div>
+    </div>
+  </header>
+
+  <main id="seccion-principal" class="pantalla">
+    <h2 id="nombreCiudad"></h2>
+    <img id="imagenClimaActual" src="" alt="Clima actual">
+    <div class="detallesActuales">
+      <div class="detalle"><span class="etiqueta">Temperatura</span><span id="temperatura"></span></div>
+      <div class="detalle"><span class="etiqueta">Sensación térmica</span><span id="sensacion"></span></div>
+      <div class="detalle"><span class="etiqueta">Cielo</span><span id="condicionCielo"></span></div>
+      <div class="detalle"><span class="etiqueta">Viento</span><span id="viento"></span></div>
+      <div class="detalle"><span class="etiqueta">Humedad</span><span id="humedad"></span></div>
+    </div>
+    <h3>Pronóstico de 3 días</h3>
+    <div id="pronostico" class="pronostico"></div>
+  </main>
+
+  <section id="seccion-cargando" class="pantalla" hidden>
+    <img src="assets/images/cargando.jpeg" alt="Cargando">
+    <p>Cargando...</p>
+    <div class="cargaCircular"></div>
+  </section>
+
+  <section id="seccion-errorNoExiste" class="pantalla" hidden>
+    <img src="assets/images/noExiste.jpeg" alt="Ciudad no encontrada">
+    <p>No existe la ciudad 😢</p>
+    <button type="button" class="botonReintentar">Reintentar</button>
+  </section>
+
+  <section id="seccion-errorSinConexion" class="pantalla" hidden>
+    <img src="assets/images/sinConexion.jpeg" alt="Sin conexión">
+    <p>Sin conexión a internet, encienda el WiFi o sus datos móviles 🙂</p>
+    <button type="button" class="botonReintentar">Reintentar</button>
+  </section>
+
+  <section id="seccion-errorServidor" class="pantalla" hidden>
+    <img src="assets/images/errorServidor.jpeg" alt="Error de servidor">
+    <p>El servidor no respondió, intenta de nuevo 😕</p>
+    <button type="button" class="botonReintentar">Reintentar</button>
+  </section>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
