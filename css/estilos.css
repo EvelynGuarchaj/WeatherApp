@@ -1,8 +1,6 @@
 /* Paleta: assets/paleta/paletaColores.jpeg */
 :root {
   --colorFondo: #ffffff;
-  --colorDifuminadoVerde: rgba(187, 217, 121, 0.45);
-  --colorDifuminadoCian: rgba(195, 223, 224, 0.55);
   --colorAcento: #9dad6f;
   --colorAcentoClaro: #bbd979;
   --colorDetalle: #7d6d60;
@@ -20,12 +18,7 @@ body {
   min-height: 100vh;
   font-family: "Segoe UI", Arial, sans-serif;
   color: var(--colorTexto);
-  background:
-    radial-gradient(circle at 0% 0%, var(--colorDifuminadoCian), transparent 45%),
-    radial-gradient(circle at 100% 0%, var(--colorDifuminadoVerde), transparent 45%),
-    radial-gradient(circle at 100% 100%, var(--colorDifuminadoCian), transparent 45%),
-    radial-gradient(circle at 0% 100%, var(--colorDifuminadoVerde), transparent 45%),
-    var(--colorFondo);
+  background: var(--colorFondo);
 }
 
 .encabezado {

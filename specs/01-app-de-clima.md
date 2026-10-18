@@ -139,6 +139,7 @@ https://api.open-meteo.com/v1/forecast?latitude={lat}&longitude={lon}
 - **Sí:** botón de búsqueda además de Enter. **No:** solo Enter — incómodo en celular.
 - **Sí:** mismo panel DOM para `principal` y `principalCiudadEncontrada`. **No:** dos secciones duplicadas — mismo diseño, distintos datos.
 - **Sí:** `forecast_days=3` y `temperature_unit=celsius` explícitos. **No:** depender de defaults — el README los exige.
+- **Sí:** fondo blanco sólido. **No:** difuminado en los bordes, se veía sucio.
 
 ## Riesgos
 
