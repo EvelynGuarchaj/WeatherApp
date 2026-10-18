@@ -1,6 +1,6 @@
 # SPEC 01 — App de clima con HTML, CSS y JS puros
 
-> **Estado:** Aprobado
+> **Estado:** Implementado
 > **Depends on:** —
 > **Date:** 2026-10-17
 > **Objective:** Construir la app de clima en HTML, CSS y JS puros que al abrir muestra el clima actual y el pronóstico de 3 días de Totonicapán y permite buscar cualquier ciudad, con sus pantallas de carga y error.
