@@ -1,0 +1,165 @@
+/* Paleta: assets/paleta/paletaColores.jpeg */
+:root {
+  --colorFondo: #ffffff;
+  --colorDifuminadoVerde: rgba(187, 217, 121, 0.45);
+  --colorDifuminadoCian: rgba(195, 223, 224, 0.55);
+  --colorAcento: #9dad6f;
+  --colorAcentoClaro: #bbd979;
+  --colorDetalle: #7d6d60;
+  --colorTexto: #333333;
+  --colorGrisClaro: #f0f0f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: var(--colorTexto);
+  background:
+    radial-gradient(circle at 0% 0%, var(--colorDifuminadoCian), transparent 45%),
+    radial-gradient(circle at 100% 0%, var(--colorDifuminadoVerde), transparent 45%),
+    radial-gradient(circle at 100% 100%, var(--colorDifuminadoCian), transparent 45%),
+    radial-gradient(circle at 0% 100%, var(--colorDifuminadoVerde), transparent 45%),
+    var(--colorFondo);
+}
+
+.encabezado {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.tituloApp {
+  color: var(--colorAcento);
+  font-size: 1.6rem;
+}
+
+.buscador {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#campoBusqueda {
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--colorAcento);
+  border-radius: 2rem;
+  font-size: 1rem;
+  min-width: 15rem;
+}
+
+#botonBuscar {
+  padding: 0.55rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  background: var(--colorAcento);
+  color: var(--colorFondo);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#botonBuscar:hover {
+  background: var(--colorAcentoClaro);
+  color: var(--colorTexto);
+}
+
+.pantalla {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+#seccion-principal {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+#nombreCiudad {
+  color: var(--colorAcento);
+  font-size: 2rem;
+}
+
+#imagenClimaActual {
+  width: min(16rem, 60vw);
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 0.4rem 1.2rem rgba(0, 0, 0, 0.15);
+}
+
+.detallesActuales {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+  width: 100%;
+  max-width: 30rem;
+}
+
+.detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 0.8rem;
+  background: var(--colorGrisClaro);
+  border-left: 0.3rem solid var(--colorAcento);
+  border-radius: 0.5rem;
+}
+
+.detalle:last-child {
+  grid-column: span 2;
+}
+
+.etiqueta {
+  color: var(--colorDetalle);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.detalle span:last-child {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+#seccion-principal h3 {
+  color: var(--colorAcento);
+  margin-top: 0.5rem;
+}
+
+.pronostico {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.diaPronostico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 9rem;
+  padding: 1rem;
+  background: var(--colorFondo);
+  border: 1px solid var(--colorAcentoClaro);
+  border-radius: 0.8rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0, 0, 0, 0.08);
+}
+
+.diaPronostico .emojiDia {
+  font-size: 2.2rem;
+}
+
+.diaPronostico .maxMin {
+  color: var(--colorDetalle);
+  font-weight: 600;
+}
